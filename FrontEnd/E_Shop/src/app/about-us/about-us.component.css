@@ -1,0 +1,26 @@
+.aboutUs-container {
+    /* margin: 0; */
+    margin-top: 150px;
+    margin-bottom: 77px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.child-aboutUs-container2 p {
+    font-size: 20px !important;
+    line-height: 44px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+
+.child-aboutUs-container2 h2 {
+    font-size: 85px;
+    line-height: 28px;
+    text-transform: capitalize;
+    padding-top: 12px;
+}
+
+.child-aboutUs-container2  {
+    width: 50%;
+}
