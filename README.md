@@ -1,28 +1,34 @@
-Angular Project
-Overview
+
+# Angular Project
 This repository contains the codebase for our Angular project, encompassing both the frontend and backend components. The backend has been seamlessly integrated into this repository for a more cohesive development experience.
 
-Getting Started
-To initiate the project, follow these steps:
+## Authors
 
-Clone the Repository:
+- [@aziz-Khaled](https://github.com/Aziz-Khaled)
+- [@bessem oueslati](https://github.com/Qirto)
 
-bash
-Copy code
+## Overview
+
+This repository contains the codebase for our Angular project, encompassing both the frontend and backend components. The backend has been seamlessly integrated into this repository for a more cohesive development experience.
+
+## Getting Started
+
+###  Clone the Repository
+```bash
 git clone https://github.com/Aziz-Khaled/Angular-Project.git
-
-Install Dependencies:
-
-bash
-Copy code
 cd Angular-Project
 npm install
-Run the Application:
+ng serve -o
 
-bash
-Copy code
-ng serve
-Access the application at http://localhost:4200/ by default.
+```
+## Original Repository
 
-Original Repository
-The original frontend repository for this project is available at Qirto/store.
+
+The original frontend repository for this project is available at [ Qirto/store .](https://github.com/Qirto/store)
+
+
+## License
+
+ This project is licensed under the  [ MIT License.](https://choosealicense.com/licenses/mit/)
+
+
