@@ -1,9 +1,14 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
+    "men": [
+      { "id": 1, "title": "1", "Description": "desc"  , "img" : "hghgh"},
+      {"id" : 2, "title": "2", "Description": "desc"  , "img" : "hghgh"},
+      { "id": 3, "title": "3", "Description": "desc"  , "img" : "hghgh"},
+      { "id": 4, "title": "4", "Description": "desc"  , "img" : "hghgh"}
     ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+    "Women": [
+      { "id": 1, "title": "1", "Description": "desc"  , "img" : "hghgh"},
+      {"id" : 2, "title": "2", "Description": "desc"  , "img" : "hghgh"},
+      { "id": 3, "title": "3", "Description": "desc"  , "img" : "hghgh"},
+      { "id": 4, "title": "4", "Description": "desc"  , "img" : "hghgh"}
+    ]
   }
