@@ -7,6 +7,9 @@ import { CartComponent } from './cart/cart.component';
 import { ShopComponent } from './shop/shop.component';
 import { UserAccountComponent } from './user-account/user-account.component';
 import { FaqComponent } from './faq/faq.component';
+import { ManComponent } from './shop/man/man.component';
+import { WomanComponent } from './shop/woman/woman.component';
+import { ShoesComponent } from './shop/shoes/shoes.component';
 
 
 const routes: Routes = [
@@ -45,7 +48,20 @@ const routes: Routes = [
   {
     path :'faq',
     component : FaqComponent,
+  },
+  {
+    path :'man',
+    component : ManComponent,
+  },
+  {
+    path :'woman',
+    component : WomanComponent,
+  },
+  {
+    path : 'shoes',
+    component : ShoesComponent,
   }
+
 
 ];
 
