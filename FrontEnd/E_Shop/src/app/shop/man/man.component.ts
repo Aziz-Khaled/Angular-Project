@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { ProdcutServiceService } from 'src/app/prodcut-service.service';
+import { Component, OnInit } from '@angular/core';
+
 import { Product } from 'src/app/product.model';
 
 @Component({
@@ -9,12 +10,37 @@ import { Product } from 'src/app/product.model';
 })
 export class ManComponent implements OnInit {
   products: Product[] = [];
+  paramMap: any;
 
-  constructor(private productService: ProdcutServiceService) {}
+  formData : Product =  {
+    id: 0,
+    name:  "",
+    description: "",
+    price: 0,
+    imageUrl: ""
+  } 
+
+  constructor(
+    private productService: ProdcutServiceService , 
+    ) {}
 
   ngOnInit(): void {
-    this.productService.products$.subscribe((products) => {
-      this.products = products;
-    });
-  }
+    this.productService.GetMenData().subscribe(data => {
+      this.products = data ; 
+    })
+
+
+    }
+
+   
+
+/*
+GetById(id: number){
+  this.productService.UpdateMenData(id).subscribe((data)=> {
+this.formData = data
+  });
 }
+*/
+
+  }
+

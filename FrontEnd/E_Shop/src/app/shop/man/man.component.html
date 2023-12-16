@@ -1,9 +1,122 @@
-<div *ngFor="let product of products" class="product-item">
+<!--<div *ngFor="let product of products" class="product-item">
     <img [src]="product.imageUrl" alt="{{ product.name }}">
     <h3>{{ product.name }}</h3>
     <p>{{ product.description }}</p>
     <p class="price">Price: ${{ product.price.toFixed(2) }}</p>
-  </div>
-  
+  </div>-->
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      *ngFor="let product of products"
+      class="product-card"
+      style="width: 18rem"
+    >
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text">{{ product.price }}</p>
+        <button href="#" class="btn btn-primary">Order</button>
 
+        <button
+          type="button"
+          class="btn btn-secondary"
+          style="border-color: #59ab6e; margin-left: 5px"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Edit
+        </button>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Edit Product
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  [(ngModel)] ="formData.name"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >description</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  [(ngModel)] ="formData.description"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >price</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  [(ngModel)] ="formData.price"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >image</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  [(ngModel)] ="formData.imageUrl"
+                />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button"  class="btn btn-primary">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

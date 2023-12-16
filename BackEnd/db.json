@@ -1,14 +1,91 @@
 {
-    "men": [
-      { "id": 1, "title": "1", "Description": "desc"  , "img" : "hghgh"},
-      {"id" : 2, "title": "2", "Description": "desc"  , "img" : "hghgh"},
-      { "id": 3, "title": "3", "Description": "desc"  , "img" : "hghgh"},
-      { "id": 4, "title": "4", "Description": "desc"  , "img" : "hghgh"}
-    ],
-    "Women": [
-      { "id": 1, "title": "1", "Description": "desc"  , "img" : "hghgh"},
-      {"id" : 2, "title": "2", "Description": "desc"  , "img" : "hghgh"},
-      { "id": 3, "title": "3", "Description": "desc"  , "img" : "hghgh"},
-      { "id": 4, "title": "4", "Description": "desc"  , "img" : "hghgh"}
-    ]
-  }
+  "men": [
+    {
+      "id": 1,
+      "name": "pull men",
+      "description": "test",
+      "price": 404040,
+      "imageUrl": "https://static.pullandbear.net/2/photos//2023/I/0/2/p/7592/700/251/7592700251_2_1_8.jpg?t=1693401149341&imwidth=1125"
+    },
+    {
+      "id": 2,
+      "name": "pull men",
+      "description": "test",
+      "price": 404040,
+      "imageUrl": ""
+    },
+    {
+      "id": 3,
+      "name": "pull men",
+      "description": "test",
+      "price": 404040,
+      "imageUrl": ""
+    },
+    {
+      "id": 4,
+      "name": "pull men",
+      "description": "test",
+      "price": 404040,
+      "imageUrl": ""
+    },
+    {
+      "id": 5,
+      "name": "pull men",
+      "description": "test",
+      "price": 404040,
+      "imageUrl": ""
+    },
+    {
+      "id": 6,
+      "name": "pull men",
+      "description": "test",
+      "price": 404040,
+      "imageUrl": ""
+    },
+    {
+      "id": 0.5436652135480782,
+      "name": "test",
+      "description": "test",
+      "price": "74",
+      "imageUrl": "mlksjf"
+    },
+    {
+      "id": 0.6021385027088597,
+      "name": "4",
+      "description": "uut",
+      "price": "57",
+      "imageUrl": "uiu"
+    }
+  ],
+  "women": [
+    {
+      "id": 7,
+      "name": "pull women",
+      "description": "test",
+      "price": 404040,
+      "imageUrl": ""
+    },
+    {
+      "id": 8,
+      "name": "pull women",
+      "description": "test",
+      "price": 404040,
+      "imageUrl": ""
+    },
+    {
+      "id": 9,
+      "name": "pull women",
+      "description": "test",
+      "price": 404040,
+      "imageUrl": ""
+    },
+    {
+      "id": 10,
+      "name": "pull women",
+      "description": "test",
+      "price": 404040,
+      "imageUrl": ""
+    }
+  ],
+  "ContactForm": []
+}
