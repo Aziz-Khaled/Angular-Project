@@ -10,16 +10,14 @@ import { Product } from 'src/app/product.model';
 })
 export class ManComponent implements OnInit {
   products: Product[] = [];
-  paramMap: any;
 
-  formData : Product =  {
-    id: 0,
-    name:  "",
-    description: "",
-    price: 0,
-    imageUrl: ""
-  } 
-
+  formProduct : Product = {
+    id: Math.random() , 
+    name: "",
+    description: "" , 
+    price: 0 , 
+    imageUrl:""
+  }
   constructor(
     private productService: ProdcutServiceService , 
     ) {}
@@ -27,9 +25,19 @@ export class ManComponent implements OnInit {
   ngOnInit(): void {
     this.productService.GetMenData().subscribe(data => {
       this.products = data ; 
+    })}
+
+
+    postProduct () {
+      this.productService.postProductMen(this.formProduct).subscribe(
+        {
+          next:(value)=> {
+            console.log("product added with success !! ") ;
+            this.productService.GetMenData()
+        },error(err) {
+          alert('Erreur d\'ajout') ;
+        },
     })
-
-
     }
 
    
