@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject , Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Product } from './product.model';
 import { HttpClient } from '@angular/common/http';
-
 @Injectable({
   providedIn: 'root',
 })
@@ -27,17 +26,23 @@ postProductWomen (product: Product) {
   return this.http.post<Product[]>('http://localhost:3000/women' , product)
 }
 
-/*
-UpdateMenData (id : number , newProduct: Product) {
-  return this.http.put<Product>(`http://localhost:3000/men/${id}`,newProduct)
+//update : 
+GetBeforeUpdateMenData (id : number) {
+  return this.http.get<Product>(`http://localhost:3000/men/${id}`)
+}
+
+UpdateMenData(id : number , product: Product): Observable<Product> {
+  return this.http.put<Product>(`http://localhost:3000/men/${id}`, product);
+}
+
+DeleteMenData(id: number): Observable<Product> {
+  return this.http.delete<Product>(`http://localhost:3000/men/${id}`);
 }
 
 
-UpdateWomenData (id : number , newProduct: Product) {
-  return this.http.put<Product>(`http://localhost:3000/women/${id}`,newProduct)
-}
 
-*/
+
+
 
 
  /* private products: Product[] = [
@@ -133,39 +138,3 @@ UpdateWomenData (id : number , newProduct: Product) {
     return this.http.delete<void>(`${this.apiUrl}/${productId}`);
   }*/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

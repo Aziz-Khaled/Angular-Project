@@ -26,18 +26,35 @@
   .price {
     color: green;
   }
-  /*
-  body {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin: 0;
-    width: 100%;
-    
-  }*/
+
   .cards {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

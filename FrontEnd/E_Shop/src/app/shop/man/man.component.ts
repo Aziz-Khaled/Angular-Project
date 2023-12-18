@@ -10,7 +10,7 @@ import { Product } from 'src/app/product.model';
 })
 export class ManComponent implements OnInit {
   products: Product[] = [];
-
+  deletedProductName: string | undefined;
   formProduct : Product = {
     id: Math.random() , 
     name: "",
@@ -18,6 +18,16 @@ export class ManComponent implements OnInit {
     price: 0 , 
     imageUrl:""
   }
+
+
+  EditProduct : Product = {
+    id: Math.random() , 
+    name: "",
+    description: "" , 
+    price: 0 , 
+    imageUrl:""
+  }
+
   constructor(
     private productService: ProdcutServiceService , 
     ) {}
@@ -28,11 +38,14 @@ export class ManComponent implements OnInit {
     })}
 
 
+
+
     postProduct () {
       this.productService.postProductMen(this.formProduct).subscribe(
         {
           next:(value)=> {
             console.log("product added with success !! ") ;
+            window.location.reload();
             this.productService.GetMenData()
         },error(err) {
           alert('Erreur d\'ajout') ;
@@ -40,15 +53,30 @@ export class ManComponent implements OnInit {
     })
     }
 
-   
+    GetThenupdateProduct (productId : number) {
+      this.productService.GetBeforeUpdateMenData(productId).subscribe((result)=>{
+        this.EditProduct = result ;
+         
+      })
+    }
 
-/*
-GetById(id: number){
-  this.productService.UpdateMenData(id).subscribe((data)=> {
-this.formData = data
-  });
-}
-*/
 
-  }
+    updateMen (productId : number) {
+    
+      this.productService
+      .UpdateMenData(productId , this.EditProduct)
+      .subscribe(() => {
+      window.location.reload();
+      this.productService.GetMenData(); 
+      })
+      }
 
+
+      deleteProduct(productId: number) {
+        this.productService.DeleteMenData(productId)
+          .subscribe(() => {
+            console.log('Product deleted !! ');
+            window.location.reload();
+            this.productService.GetMenData(); 
+          });}
+    }
