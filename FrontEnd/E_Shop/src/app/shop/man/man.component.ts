@@ -10,9 +10,10 @@ import { Product } from 'src/app/product.model';
 })
 export class ManComponent implements OnInit {
   products: Product[] = [];
-  deletedProductName: string | undefined;
+
+
   formProduct : Product = {
-    id: Math.random() , 
+    id: 0 , 
     name: "",
     description: "" , 
     price: 0 , 
@@ -62,7 +63,6 @@ export class ManComponent implements OnInit {
 
 
     updateMen (productId : number) {
-    
       this.productService
       .UpdateMenData(productId , this.EditProduct)
       .subscribe(() => {
@@ -70,7 +70,6 @@ export class ManComponent implements OnInit {
       this.productService.GetMenData(); 
       })
       }
-
 
       deleteProduct(productId: number) {
         this.productService.DeleteMenData(productId)

@@ -1,11 +1,18 @@
 {
   "men": [
     {
-      "id": 0.5110175802511929,
-      "name": "azerty",
-      "description": "azertynbvcxw",
-      "price": "544",
-      "imageUrl": "poml"
+      "id": 1,
+      "name": "test1",
+      "description": "...",
+      "price": "12",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
+      "name": "test2",
+      "description": "...",
+      "price": "887",
+      "imageUrl": ""
     }
   ],
   "women": [
@@ -38,5 +45,61 @@
       "imageUrl": ""
     }
   ],
-  "ContactForm": []
+  "ContactForm": [
+    {
+      "name": "",
+      "email": "",
+      "TextBox": "",
+      "PhoneNumber": 0,
+      "id": 1
+    },
+    {
+      "name": "",
+      "email": "",
+      "TextBox": "",
+      "PhoneNumber": 0,
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "TextBox": "",
+      "PhoneNumber": 0,
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "",
+      "TextBox": "",
+      "PhoneNumber": 0,
+      "id": 4
+    },
+    {
+      "Name": "test",
+      "email": "test@gmail.com",
+      "number": "54",
+      "description": "testing post method",
+      "id": 5
+    },
+    {
+      "Name": "testa",
+      "email": "",
+      "number": "",
+      "description": "",
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "Name": "aziz",
+      "email": "mjkh",
+      "number": "mkj",
+      "description": "jh",
+      "id": 9
+    }
+  ]
 }

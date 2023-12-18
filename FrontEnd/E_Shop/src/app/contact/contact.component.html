@@ -9,7 +9,7 @@
         <path d="M70.865,101.78c0,4.774,3.886,8.657,8.66,8.657c4.774,0,8.657-3.883,8.657-8.657c0-4.773-3.883-8.656-8.657-8.656    C74.751,93.124,70.865,97.006,70.865,101.78z"></path>
       </svg>
     </div>
-    <form [formGroup] = "contact" action="#" method="post" id="contact_form">
+    <form [formGroup] = "Contact" action="#" method="post" id="Contact_form">
 
       <div class="name">
         <label for="name"></label>
@@ -17,7 +17,7 @@
         placeholder="My name is"
         name="name" id="name_input"
         formControlName = "Name">
-        <div class ="alert alert-danger" *ngIf="contact.get('name')?.touched && contact.get('name')?.invalid">fill the name please</div>
+        <div class ="alert alert-danger" *ngIf="Contact.get('name')?.touched && Contact.get('name')?.invalid">fill the name please</div>
       </div>
 
       <div class="email">
@@ -26,7 +26,7 @@
         placeholder="e-mail" 
         name="email" id="email_input" 
         formControlName = "email">
-        <div class ="alert alert-danger" *ngIf="contact.get('email')?.touched && contact.get('email')?.invalid">fill the email please</div>
+        <div class ="alert alert-danger" *ngIf="Contact.get('email')?.touched && Contact.get('email')?.invalid">fill the email please</div>
       </div>
 
       <div class="telephone">
@@ -35,7 +35,7 @@
         placeholder="My number is" 
         name="telephone" id="telephone_input" 
         formControlName = "number">
-        <div class ="alert alert-danger" *ngIf="contact.get('telephone')?.touched && contact.get('telephone')?.invalid">fill the phone number please</div>
+        <div class ="alert alert-danger" *ngIf="Contact.get('telephone')?.touched && Contact.get('telephone')?.invalid">fill the phone number please</div>
       </div>
 
       <div class="message">
@@ -46,11 +46,11 @@
         cols="30" 
         rows="5" 
         formControlName = "description"></textarea>
-        <div class ="alert alert-danger" *ngIf="contact.get('description')?.touched && contact.get('description')?.invalid"> fill the description please</div>
+        <div class ="alert alert-danger" *ngIf="Contact.get('description')?.touched && Contact.get('description')?.invalid"> fill the description please</div>
       </div>
 
       <div class="submit">
-        <input type="submit" value="Send Message" id="form_button" />
+        <input type="submit" (click)="postC()" value="Send Message" id="form_button" />
       </div>
     </form><!-- // End form -->
   </div><!-- // End #container -->
