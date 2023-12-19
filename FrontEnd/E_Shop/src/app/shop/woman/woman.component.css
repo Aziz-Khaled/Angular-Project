@@ -1,5 +1,59 @@
-body {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:center; /* Ensure equal spacing between items */
+}
+
+.product-box {
+  flex: 0 0 calc(33.333% - 20px); /* Set fixed width for each box */
+  margin-bottom: 20px; /* Adjust as needed for spacing between rows */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-item {
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.price {
+  color: green;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -78,4 +78,15 @@ export class ManComponent implements OnInit {
             window.location.reload();
             this.productService.GetMenData(); 
           });}
+
+          onFileChange(event: any): void {
+            const file = event.target.files[0];
+            if (file) {
+              const reader = new FileReader();
+              reader.onloadend = () => {
+                this.formProduct.imageUrl = reader.result as string;
+              };
+              reader.readAsDataURL(file);
+            }
+          }
     }

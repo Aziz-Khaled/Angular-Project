@@ -52,9 +52,9 @@
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">image</label>
           <input
-            type="email"
+            type="file"
             class="form-control"
-            [(ngModel)]="formProduct.imageUrl"
+            (change)="onFileChange($event)"
             id="exampleFormControlInput1"
           />
         </div>
@@ -119,39 +119,33 @@
       <!--editContainer end-->
     </div>
 
-    <div class="cards">
-      <div
-        *ngFor="let product of products"
-        class="product-card"
-        style="width: 18rem"
-      >
-        <img [src] = "product.imageUrl" class="card-img-top" alt="" />
-        <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">{{ product.description }}</p>
-          <p class="card-text">{{ product.price }}</p>
-          <button href="#" class="btn btn-primary">Order</button>
-          <button
-            class="btn btn-secondary"
-            (click)="GetThenupdateProduct(product.id)"
-            style="margin-left: 5px"
-          >
-            Edit
-          </button>
-          
-          <button
-            type="button"
-            class="btn btn-danger"
-            style="margin-left: 5px"
-            (click)="deleteProduct(product.id)"
-          >
-            Delete
-          </button>
-        </div>
-      </div>
-    </div>
-  
-
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let product of products">
+        <td>
+          <div class="cards product-card">
+            <img [src]="product.imageUrl" class="card-img-top" alt="" />
+            <div class="card-body">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text">{{ product.description }}</p>
+              <p class="card-text">{{ product.price }}</p>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="cards product-card">
+            <div class="card-body">
+              <button href="#" class="btn btn-primary">Order</button>
+              <button class="btn btn-secondary" (click)="GetThenupdateProduct(product.id)">Edit</button>
+              <button type="button" class="btn btn-danger" (click)="deleteProduct(product.id)">Delete</button>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
 
 
 
