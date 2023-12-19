@@ -76,20 +76,6 @@ ng serve -o
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
 ## Original Repository
 
@@ -102,14 +88,5 @@ The original frontend repository for this project is available at [ Qirto/store 
  This project is licensed under the  [ MIT License.](https://choosealicense.com/licenses/mit/)
 
 
-## Roadmap
 
-- Additional browser support
-
-- Add more integrations
-
-
-## Demo
-
-Insert gif or link to demo
 
