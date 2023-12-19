@@ -1,7 +1,9 @@
 
-![Screenshot](https://i.imgur.com/bsSOqka.png)
 
 # 👨🏻‍💻 About the project
+
+![Screenshot](https://i.imgur.com/bsSOqka.png)
+
 This repository contains the codebase for our Angular project, encompassing both the frontend and backend components. The backend has been seamlessly integrated into this repository for a more cohesive development experience.
 
 
