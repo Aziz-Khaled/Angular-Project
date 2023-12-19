@@ -16,7 +16,20 @@ This repository contains the codebase for our Angular project, encompassing both
 ###  Clone the Repository
 ```bash
 git clone https://github.com/Aziz-Khaled/Angular-Project.git
-cd Angular-Project
+```
+###  Setup the BackEnd
+```bash
+
+cd .\BackEnd\
+npm install
+json-server --watch db.json
+```
+###  Setup the Project
+
+```bash
+
+cd .\FrontEnd\
+cd .\E_Shop\
 npm install
 ng serve -o
 
